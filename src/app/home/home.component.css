@@ -1,0 +1,33 @@
+.img {
+    width: 286px;
+    height: 500px;
+}
+
+.bg {
+    background-color: rgba(0, 0, 0, 0.153);
+    background: url(/assets/recursos/fondo.jpeg);
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.center {
+    margin: auto;
+    display: flex;
+}
+
+.ajuste {
+    height: 100%;
+    width: 80%;
+}
+
+.eslogan {
+    color: rgb(0, 0, 0);
+    opacity: 100%;
+    font-style: oblique;
+}
