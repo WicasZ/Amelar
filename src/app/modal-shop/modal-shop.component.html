@@ -1,0 +1,35 @@
+<!--<div *ngIf="mostrar">
+  <p>modal-shop works!</p>
+  <p>Datos {{ productoS.titulo }}</p>
+  <p>Cantidad {{ cantidad }}</p>
+  <button class="btn btn-primary" (click)="ocultarD()">ocultar</button>
+</div>
+
+-->
+<div class="conteiner">
+  <div class="row my-4">
+    <div class="col-9">
+      <app-view-product (prodcutosCar)="addProduct($event)"></app-view-product>
+    </div>
+    <div class="col-3">
+      <div class="mx-4 text-center alert alert-secondary">
+        <div class="alert alert-danger" *ngIf="productosCar.length <= 0">
+          <h4>Sin productos</h4>
+        </div>
+        <div  *ngIf="productosCar.length > 0">
+          <div class="alert alert-info">
+            <h4>Prodcutos</h4>
+          </div>
+          <div class="" *ngFor="let p of productosCar">
+            <p class="row"><strong>Producto: </strong> {{ p.descripcion }} <strong> Precio: </strong> {{p.precio}} <strong>Cant. </strong> {{p.cant}}</p>
+            <button class="btn text-danger" (click)="onDelete(p)">X</button>
+            <hr />
+          </div>
+          <button class="btn" (click)="Alldelete()">Eliminar todo</button>
+          <hr />
+          <p><strong>Total: </strong>$ {{total}} ;)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

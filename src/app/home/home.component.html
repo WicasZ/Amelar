@@ -10,18 +10,20 @@
   
 </div>
 
-<div class="conteiner py-4 mx-auto">
-  <h2 class="text-center pb-3">Productos Amelar</h2>
+<div class="conteiner py-4 mx-auto text-center">
+  <h2 class="pb-3">Productos Amelar</h2>
     <div class="row text-center mx-auto" style="width: 80%;">
         <div class="col" *ngFor="let producto of Producto">
-            <div class="card" style="width: 18rem;" >
+            <div class="card mx-auto" style="width: 18rem;" >
                 <img src="{{producto.imagen}}" class="card-img-top img" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{producto.titulo}}</h5>
                   <p class="card-text">{{producto.descripcion}}</p>
-                  <a href="#" class="btn btn-primary">Ver más</a>
+                  <p class="card-text">${{producto.precio}}</p>
                 </div>
               </div>
         </div>
     </div>
+    <br>
+    <a href="/compra" class="btn btn-primary">Comprar</a>
 </div>
