@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ɵɵi18nPostprocess } from '@angular/core';
-import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
+import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 
 import { ProductosI } from '../share/productos';
 
@@ -10,12 +10,13 @@ import { ProductosI } from '../share/productos';
 })
 export class ModalShopComponent implements OnInit {
   public payPalConfig?: IPayPalConfig;
-
   constructor() {}
   productosCar: ProductosI[] = [];
   total: number = 0;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initConfig();
+  }
 
   showP() {
     console.log(this.productosCar);
@@ -80,23 +81,21 @@ export class ModalShopComponent implements OnInit {
   }
 
   //configuracion paypal
-
   private initConfig(): void {
     this.payPalConfig = {
-      currency: 'MXM',
-      clientId:
-        'Aat_vgA4bWbJSlSLXeLEJy7piGsAa8qakj_WsTGOr_9nM91dVTXMbX3_0JMpnzmHiUV9cAbYa1S1Wp0f',
+      currency: 'EUR',
+      clientId: 'sb',
       createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
           purchase_units: [
             {
               amount: {
-                currency_code: 'MXM',
+                currency_code: 'EUR',
                 value: '9.99',
                 breakdown: {
                   item_total: {
-                    currency_code: 'MXM',
+                    currency_code: 'EUR',
                     value: '9.99',
                   },
                 },
@@ -107,7 +106,7 @@ export class ModalShopComponent implements OnInit {
                   quantity: '1',
                   category: 'DIGITAL_GOODS',
                   unit_amount: {
-                    currency_code: 'MXM',
+                    currency_code: 'EUR',
                     value: '9.99',
                   },
                 },
