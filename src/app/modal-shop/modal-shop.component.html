@@ -28,6 +28,7 @@
           <button class="btn" (click)="Alldelete()">Eliminar todo</button>
           <hr />
           <p><strong>Total: </strong>$ {{total}} ;)</p>
+          <ngx-paypal [config]="payPalConfig"></ngx-paypal>
         </div>
       </div>
     </div>

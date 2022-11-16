@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalShopComponent } from './modal-shop/modal-shop.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModalShopComponent } from './modal-shop/modal-shop.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
