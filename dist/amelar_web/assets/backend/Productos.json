@@ -1,0 +1,19 @@
+{
+    "Prodcutos": [
+        {
+            "id":1, 
+            "imagen": "assets/recursos/vino350ml.png", 
+            "titulo": "Vino Amelar", 
+            "descripcion": "Vino Amelar", 
+            "precio": 85
+        },
+        {
+            "id": 2, 
+            "imagen": "assets/recursos/vino850ml.png", 
+            "titulo": "Vino Amelar", 
+            "descripcion": "Vino de 850 ml", 
+            "precio": 180
+        }
+        
+    ]
+}
