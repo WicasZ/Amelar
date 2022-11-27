@@ -59,7 +59,7 @@ export class ModalShopComponent implements OnInit {
   Alldelete() {
     this.productosCar = [];
     this.total = 0;
-    console.log(this.productosCar);
+    this.showP();
   }
 
   calTotal() {
@@ -83,34 +83,24 @@ export class ModalShopComponent implements OnInit {
   //configuracion paypal
   private initConfig(): void {
     this.payPalConfig = {
-      currency: 'EUR',
-      clientId: 'sb',
+      currency: 'MXN',
+      clientId: 'AZ5k6x3i407zym8l8U5dB3ianW7oQAdoRMgYC3TrYwTqyENHmF4UaNbJf0Znqr0RQTqfJwrJH5en9rwm',
       createOrderOnClient: (data) =>
         <ICreateOrderRequest>{
           intent: 'CAPTURE',
           purchase_units: [
             {
               amount: {
-                currency_code: 'EUR',
-                value: '9.99',
+                currency_code: 'MXN',
+                value: this.total.toString(),
                 breakdown: {
                   item_total: {
-                    currency_code: 'EUR',
-                    value: '9.99',
+                    currency_code: 'MXN',
+                    value: this.total.toString(),
                   },
                 },
               },
-              items: [
-                {
-                  name: 'Enterprise Subscription',
-                  quantity: '1',
-                  category: 'DIGITAL_GOODS',
-                  unit_amount: {
-                    currency_code: 'EUR',
-                    value: '9.99',
-                  },
-                },
-              ],
+              items: this.getProductsCard()
             },
           ],
         },
@@ -139,16 +129,38 @@ export class ModalShopComponent implements OnInit {
           'onClientAuthorization - you should probably inform your server about completed transaction at this point',
           data
         );
+        alert("Compra exitosa, gracias por su preferencia");
+        this.Alldelete();
       },
       onCancel: (data, actions) => {
         console.log('OnCancel', data, actions);
       },
       onError: (err) => {
         console.log('OnError', err);
+        alert("A ocurrido un error");
+        this.Alldelete();
       },
       onClick: (data, actions) => {
         console.log('onClick', data, actions);
       },
     };
+  }
+
+  getProductsCard(): any[] {
+    const prods: any[] = [];
+    let prod = {};
+    this.productosCar.forEach((it: ProductosI) => {
+      prod = {
+        name: it.descripcion,
+        quantity: it.cant,
+        unit_amount: {
+          currency_code: 'MXN',
+          value: it.precio,
+        }
+      };
+      prods.push(prod);
+    });
+    console.log(prods);
+    return prods
   }
 }

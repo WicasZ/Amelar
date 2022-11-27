@@ -1,7 +1,14 @@
 .background {
-    background-color: #D9C5C5;
+    background-color: #f2f2f0b1
 }
 
 .size {
     font-size: 25px;
+}
+
+.eslogan {
+    color: rgb(0, 0, 0);
+    opacity: 100%;
+    font-style: oblique;
+    font-family: fantasy;
 }

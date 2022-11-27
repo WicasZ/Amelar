@@ -1,29 +1,28 @@
-<div class="conteiner bg">
-  <div class="row ajuste text-center mx-auto">
-    <div class="col my-auto">
-      <h1 class="eslogan"><strong>DALE UN SORBO DE AMELAR A TU VIDA</strong></h1>
-    </div>
-    <div class="col center d-none">
-      <img src="assets/recursos/producto.png" alt="" height="300rem">
+<div class="body">
+  <div class="conteiner bg">
+    <div class="row ajuste text-center mx-auto">
+      <div class="col my-auto"></div>
+      <div class="col center d-none">
+        <img src="assets/recursos/producto.png" alt="" height="300rem" />
+      </div>
     </div>
   </div>
-  
-</div>
 
-<div class="conteiner py-4 mx-auto text-center">
-  <h2 class="pb-3">Productos Amelar</h2>
-    <div class="row text-center mx-auto" style="width: 80%;">
-        <div class="col" *ngFor="let producto of Producto">
-            <div class="card mx-auto" style="width: 18rem;" >
-                <img src="{{producto.imagen}}" class="card-img-top img" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{producto.titulo}}</h5>
-                  <p class="card-text">{{producto.descripcion}}</p>
-                  <p class="card-text">${{producto.precio}}</p>
-                </div>
-              </div>
+  <div class="conteiner py-4 mx-auto text-center">
+    <h2 class="pb-3">Productos AMELAR</h2>
+    <div class="row text-center mx-auto" style="width: 80%">
+      <div class="col" *ngFor="let producto of Producto">
+        <div class="card mx-auto targ" style="width: 18rem">
+          <img src="{{ producto.imagen }}" class="card-img-top img" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.titulo }}</h5>
+            <p class="card-text">{{ producto.descripcion }}</p>
+            <p class="card-text">Precio: ${{ producto.precio }}</p>
+          </div>
         </div>
+      </div>
     </div>
-    <br>
-    <a href="/compra" class="btn btn-primary">Comprar</a>
+    <br />
+    <a href="/compra" class="btn btn-color">--Comprar--</a>
+  </div>
 </div>

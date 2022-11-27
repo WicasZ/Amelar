@@ -18,7 +18,7 @@
         </div>
         <div *ngIf="productosCar.length > 0">
           <div class="alert alert-info">
-            <h4>Prodcutos</h4>
+            <h4>Su carrito</h4>
           </div>
           <div class="" *ngFor="let p of productosCar">
             <p class="row">
@@ -31,7 +31,7 @@
           </div>
           <button class="btn" (click)="Alldelete()">Eliminar todo</button>
           <hr />
-          <p><strong>Total: </strong>$ {{ total }} ;)</p>
+          <p><strong>Total: </strong>$ {{ total }}</p>
           <div>
             <ngx-paypal [config]="payPalConfig"></ngx-paypal>
           </div>

@@ -2,3 +2,14 @@
     width: 286px;
     height: 500px;
 }
+
+.targ{
+    background-color: #D9C5C5;
+    border-color: black;
+}
+
+.btn-color{
+    background-color: #f2f2f0;
+    border-color: #8C6B64;
+    border-width: 3px;
+}
