@@ -10,8 +10,8 @@ import { ProductosI } from '../share/productos';
 export class HomeComponent implements OnInit {
   //Producto: ProductosI[] = [];
   Producto: ProductosI[]=[
-    {id:0, imagen: 'assets/recursos/vino350ml.png', titulo: 'Vino AMELAR', descripcion: 'Vino Amelar de 350 ml', 'precio': 85, cant:1},
-    {id: 1, imagen: 'assets/recursos/vino850ml.png', titulo: 'Vino AMLEAR', descripcion: 'Vino Amelar de 850 ml', 'precio': 180, cant:1}
+    {id:0, imagen: 'assets/recursos/vino350ml.png', titulo: 'Vino AMELAR', descripcion: 'Vino AMELAR de 350 ml', 'precio': 85, cant:1},
+    {id: 1, imagen: 'assets/recursos/vino850ml.png', titulo: 'Vino AMELAR', descripcion: 'Vino AMELAR de 850 ml', 'precio': 180, cant:1}
   ]
   productoV!: ProductosI;
 
