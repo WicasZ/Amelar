@@ -11,6 +11,8 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalShopComponent } from './modal-shop/modal-shop.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { ObjectComponent } from './object/object.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NgxPayPalModule } from 'ngx-paypal';
     HomeComponent,
     FooterComponent,
     ViewProductComponent,
-    ModalShopComponent
+    ModalShopComponent,
+    ObjectComponent,
+    ContactComponent
   ],
   exports:[
     HomeComponent
